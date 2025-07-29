@@ -42,9 +42,13 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-12 h-12 bg-gradient-to-br from-cyan-glow to-cta-yellow rounded-xl flex items-center justify-center"
+              className="w-12 h-12 rounded-xl overflow-hidden"
             >
-              <span className="text-midnight font-exo font-bold text-xl">Y</span>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_smart-transit-4/artifacts/t9bwckdk_LOGO.png"
+                alt="Your NEMT LLC Logo"
+                className="w-full h-full object-contain"
+              />
             </motion.div>
             <div>
               <h1 className="text-xl font-exo font-bold text-off-white group-hover:text-cyan-glow transition-colors">
