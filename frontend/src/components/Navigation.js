@@ -45,7 +45,7 @@ const Navigation = () => {
               className="w-12 h-12 rounded-xl overflow-hidden"
             >
               <img 
-                src="https://customer-assets.emergentagent.com/job_smart-transit-4/artifacts/t9bwckdk_LOGO.png"
+                src="https://customer-assets.emergentagent.com/job_smart-transit-4/artifacts/48fpnbpk_LOGO.png"
                 alt="Your NEMT LLC Logo"
                 className="w-full h-full object-contain"
               />
