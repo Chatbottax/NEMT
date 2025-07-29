@@ -110,8 +110,8 @@ const NEMTServicesPage = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1721411480070-fcb558776d54"
-            alt="Medical Transportation"
+            src="https://images.unsplash.com/photo-1611946239024-00b6e726ea7e"
+            alt="Medical Transport Van"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-midnight/80"></div>

@@ -49,8 +49,8 @@ const StudentTransportationPage = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1527058918112-6e17a8213943"
-            alt="Professional School Bus"
+            src="https://images.pexels.com/photos/32322669/pexels-photo-32322669.jpeg"
+            alt="School Bus - Student Transportation"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-midnight/80"></div>
@@ -94,13 +94,13 @@ const StudentTransportationPage = () => {
               to="/contact-us"
               className="px-8 py-4 bg-cta-yellow text-midnight font-semibold rounded-xl hover:shadow-cta-glow transition-all duration-300 hover:scale-105"
             >
-              Request Transportation Quote
+              Contact Us Today
             </Link>
             <Link 
               to="/safety-compliance"
               className="px-8 py-4 bg-transparent border-2 border-cyan-glow text-cyan-glow font-semibold rounded-xl hover:bg-cyan-glow hover:text-midnight transition-all duration-300 hover:scale-105"
             >
-              View Safety Records
+              View Compliance Info
             </Link>
           </motion.div>
         </motion.div>
@@ -192,10 +192,10 @@ const StudentTransportationPage = () => {
           >
             <div className="bg-gradient-to-r from-cyan-glow/10 to-cta-yellow/10 border border-glass-border rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-exo font-bold mb-4 text-off-white">
-                Ready to Partner with Your District?
+                Looking for a Provider?
               </h3>
               <p className="text-off-white/80 mb-6">
-                Contact us today to discuss your student transportation needs and learn how we can provide safe, reliable service for your special needs students.
+                Please contact us and learn how we can provide safe, reliable service for your special needs students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center space-x-2 text-off-white">
@@ -206,7 +206,7 @@ const StudentTransportationPage = () => {
                   to="/contact-us"
                   className="px-6 py-3 bg-cta-yellow text-midnight font-semibold rounded-lg hover:shadow-cta-glow transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Consultation
+                  Contact Us
                 </Link>
               </div>
             </div>

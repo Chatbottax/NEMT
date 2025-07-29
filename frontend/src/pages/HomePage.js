@@ -30,11 +30,11 @@ const HomePage = () => {
     <div className="relative">
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1596753599476-7a7c2f7677fc"
-            alt="Modern Transportation Technology"
+            src="https://images.pexels.com/photos/32322669/pexels-photo-32322669.jpeg"
+            alt="School Bus - Student Transportation"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-midnight/70 backdrop-blur-sm"></div>
