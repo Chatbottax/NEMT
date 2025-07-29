@@ -1,53 +1,76 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Heart, Users, Award, MapPin, Phone } from 'lucide-react';
+import { Heart, Users, Award, MapPin, Phone, Shield, CheckCircle } from 'lucide-react';
 
 const AboutUsPage = () => {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [missionRef, missionInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [leadershipRef, leadershipInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [valuesRef, valuesInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [processRef, processInView] = useInView({ threshold: 0.1, triggerOnce: true });
 
-  const values = [
+  const whyChooseUs = [
     {
-      icon: Heart,
-      title: "Compassionate Care",
-      description: "Every passenger receives dignified, respectful treatment with genuine care for their well-being and comfort."
+      icon: Award,
+      title: "FirstAlt-Approved & Compliant",
+      description: "Fully registered and credentialed with FirstAlt, we follow their recognized standards—including comprehensive background checks, DOT medical exams, drug screenings, Live Scan fingerprinting, and safety training."
     },
     {
       icon: Users,
-      title: "Safety First",
-      description: "Uncompromising commitment to safety through rigorous training, background checks, and vehicle maintenance."
+      title: "Reliability Through Familiarity",
+      description: "Our drivers consistently serve the same routes, so students benefit from routine. We coordinate closely with dispatch and support every route with our driver app for real-time communication and oversight."
     },
     {
-      icon: Award,
-      title: "Excellence",
-      description: "Continuous improvement in service quality, technology adoption, and professional development."
+      icon: Heart,
+      title: "Focused on Special Needs Students",
+      description: "We prioritize building a calm, respectful experience tailored to each student's needs. Safety and clarity guide every mile."
     },
     {
       icon: MapPin,
-      title: "Community Focus",
-      description: "Deep roots in Southern California with a commitment to serving our neighbors and building lasting relationships."
+      title: "Local, Flexible Work Opportunities",
+      description: "Our model offers weekday-only school-hour schedules, ideal for dependable part-time work. Whether you're a retiree, a stay-at-home parent, or a local community member looking for meaningful work, we offer a structured yet flexible role."
     }
   ];
 
-  const leadership = [
+  const processSteps = [
     {
-      name: "Sami Abdullah",
-      title: "President & Founder",
-      image: "https://images.unsplash.com/photo-1666830070102-0c2f74d2e692",
-      bio: "With over 15 years of experience in transportation and healthcare services, Sami founded Your NEMT with a vision to transform how vulnerable populations access essential services. His commitment to safety and innovation has made Your NEMT the trusted partner for districts and healthcare providers across Southern California.",
-      phone: "951-433-0797",
-      specialty: "Strategic Partnerships & Business Development"
+      title: "Driver Onboarding & Training",
+      description: "Our drivers all passed comprehensive background checks, drug screening, DOT medical exam, TB test, Live Scan fingerprinting, and virtual safety training before beginning routes."
     },
     {
-      name: "Adam",
-      title: "Operations Director",
-      image: "https://images.unsplash.com/photo-1609436132311-e4b0c9370469",
-      bio: "Adam brings a wealth of operational expertise and a hands-on approach to daily operations. His dedication to efficient routing, driver support, and customer service ensures every trip meets our exacting standards. He personally oversees our technology integration and continuous improvement initiatives.",
-      phone: "714-854-2795",
-      specialty: "Operations Management & Service Coordination"
+      title: "Vehicle Readiness",
+      description: "Home vehicles (2015 or newer) are inspected to meet FirstAlt's standards. We help coordinate inspections and required paperwork."
+    },
+    {
+      title: "Consistent Route Assignments",
+      description: "Each driver is assigned tailored morning and afternoon routes based on student needs. We ensure reliable schedules and transparent communication through our app."
+    },
+    {
+      title: "Ongoing Support & Supervision",
+      description: "Our dispatch team provides real-time support and guidance. Any incidents, delays, or route adjustments are communicated promptly."
+    }
+  ];
+
+  const values = [
+    {
+      icon: Shield,
+      title: "Safety First",
+      description: "Every decision—from driver screening to app-based oversight—prioritizes student safety."
+    },
+    {
+      icon: Users,
+      title: "Trust Through Consistency",
+      description: "We ensure students see familiar faces, routes, and environments every day."
+    },
+    {
+      icon: Heart,
+      title: "Respect and Compassion",
+      description: "Our approach is rooted in dignity and understanding for each child's experience."
+    },
+    {
+      icon: MapPin,
+      title: "Community-Centered Work",
+      description: "We serve local families and bring local support to communities that need it."
     }
   ];
 
@@ -77,9 +100,9 @@ const AboutUsPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl font-exo font-bold mb-6"
           >
-            Connecting Lives Through{' '}
+            About{' '}
             <span className="text-transparent bg-gradient-to-r from-cyan-glow to-cta-yellow bg-clip-text">
-              Safe Transportation
+              YOUR NEMT, LLC
             </span>
           </motion.h1>
           
@@ -89,7 +112,7 @@ const AboutUsPage = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-off-white/90 leading-relaxed"
           >
-            Founded with a mission to provide exceptional transportation services, Your NEMT has become Southern California's most trusted partner for student and medical transportation.
+            At YOUR NEMT, LLC, we specialize in providing safe, reliable, and personalized student transportation services for children with special needs.
           </motion.p>
         </motion.div>
       </section>
@@ -109,17 +132,101 @@ const AboutUsPage = () => {
             </h2>
             
             <div className="bg-gradient-to-r from-cyan-glow/10 to-cta-yellow/10 border border-glass-border rounded-2xl p-12 max-w-5xl mx-auto">
-              <h3 className="text-3xl font-exo font-bold mb-6 text-off-white">
-                Connecting Students to Their Future, Safely and Reliably
-              </h3>
               <p className="text-xl text-off-white/90 leading-relaxed mb-6">
-                We believe every student deserves safe, reliable transportation to access their education, and every patient deserves dignified transport to essential medical care. Our mission extends beyond simply moving people from point A to point B.
+                We believe quality transportation is more than getting from point A to B. It's about delivering care, consistency, and peace of mind. As an independent contractor-based service, our drivers become familiar faces in students' daily routines—creating trust, stability, and a positive start and end to each school day.
               </p>
               <p className="text-lg text-off-white/80 leading-relaxed">
-                Based in Riverside County, we specialize in serving children with disabilities and patients requiring medical transportation. Our comprehensive approach combines cutting-edge technology, rigorous safety protocols, and genuine human compassion to create transportation experiences that families and healthcare providers can trust completely.
+                As a licensed and trusted FirstAlt transportation provider operating throughout Corona, Riverside, and San Bernardino County, our mission is to ensure every ride supports a child's comfort, independence, and well-being.
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 bg-glass-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-exo font-bold mb-6">
+              Why Choose <span className="text-cyan-glow">Us</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-glass-white backdrop-blur-glass border border-glass-border rounded-2xl p-8 hover:border-cyan-glow/50 hover:shadow-glass transition-all duration-300 group"
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-glow/20 to-cta-yellow/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="w-8 h-8 text-cyan-glow" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-exo font-bold mb-4 text-off-white group-hover:text-cyan-glow transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-off-white/80 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            ref={processRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={processInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-exo font-bold mb-6">
+              Our <span className="text-cyan-glow">Process</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={processInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="bg-glass-white backdrop-blur-glass border border-glass-border rounded-xl p-6 hover:border-cyan-glow/50 hover:shadow-glass transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-cyan-glow text-midnight rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-exo font-bold text-off-white mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-off-white/80 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -134,11 +241,8 @@ const AboutUsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-exo font-bold mb-6">
-              Our Core <span className="text-cyan-glow">Values</span>
+              Values That <span className="text-cyan-glow">Drive Us</span>
             </h2>
-            <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-              These principles guide every decision we make and every service we provide.
-            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -167,73 +271,8 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* Commitment to Growth Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            ref={leadershipRef}
-            initial={{ opacity: 0, y: 50 }}
-            animate={leadershipInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-exo font-bold mb-6">
-              Meet Our <span className="text-cyan-glow">Leadership</span>
-            </h2>
-            <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-              Experienced professionals dedicated to excellence in transportation services.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {leadership.map((leader, index) => (
-              <motion.div
-                key={leader.name}
-                initial={{ opacity: 0, y: 50 }}
-                animate={leadershipInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.3 }}
-                className="bg-glass-white backdrop-blur-glass border border-glass-border rounded-2xl p-8 hover:border-cyan-glow/50 hover:shadow-glass transition-all duration-300"
-              >
-                <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8">
-                  {/* Profile Image */}
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={leader.image}
-                      alt={leader.name}
-                      className="w-32 h-32 rounded-xl object-cover border-2 border-glass-border"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-exo font-bold text-off-white mb-2">
-                      {leader.name}
-                    </h3>
-                    <p className="text-cyan-glow font-semibold mb-2">
-                      {leader.title}
-                    </p>
-                    <p className="text-cta-yellow text-sm font-medium mb-4">
-                      {leader.specialty}
-                    </p>
-                    
-                    <p className="text-off-white/80 leading-relaxed mb-6">
-                      {leader.bio}
-                    </p>
-
-                    <div className="flex items-center space-x-2 text-off-white">
-                      <Phone className="w-4 h-4 text-cyan-glow" />
-                      <span className="font-semibold">{leader.phone}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Stats / Achievements */}
-      <section className="py-20 px-4 bg-glass-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -243,43 +282,34 @@ const AboutUsPage = () => {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-exo font-bold mb-16">
-              Our <span className="text-cyan-glow">Impact</span>
+              Join Us on the <span className="text-cyan-glow">Journey</span>
             </h2>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-5xl font-exo font-bold text-cyan-glow mb-4">15+</div>
-                <div className="text-off-white font-semibold">Years of Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-exo font-bold text-cta-yellow mb-4">100%</div>
-                <div className="text-off-white font-semibold">Safety Compliance</div>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-exo font-bold text-cyan-glow mb-4">24/7</div>
-                <div className="text-off-white font-semibold">Emergency Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-exo font-bold text-cta-yellow mb-4">50+</div>
-                <div className="text-off-white font-semibold">Partner Districts</div>
-              </div>
-            </div>
-
-            <div className="mt-16 bg-gradient-to-r from-cyan-glow/10 to-cta-yellow/10 border border-glass-border rounded-2xl p-8">
-              <h3 className="text-2xl font-exo font-bold mb-4 text-off-white">
-                Ready to Partner with Us?
+            <div className="bg-gradient-to-r from-cyan-glow/10 to-cta-yellow/10 border border-glass-border rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-exo font-bold mb-6 text-off-white">
+                Commitment to Growth
               </h3>
-              <p className="text-off-white/80 mb-6 max-w-2xl mx-auto">
-                Experience the difference that comes from working with a transportation company that truly cares about the communities we serve.
+              <p className="text-off-white/90 mb-6 text-lg leading-relaxed">
+                As YOUR NEMT, LLC expands in Southern California, we nurture opportunities for drivers to take additional routes and enhance community impact.
               </p>
-              <motion.a
-                href="/contact-us"
-                whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-cta-yellow text-midnight font-semibold rounded-xl hover:shadow-cta-glow transition-all duration-300"
-              >
-                <span>Contact Our Team</span>
-                <Phone className="w-5 h-5" />
-              </motion.a>
+              <p className="text-off-white/80 mb-8 text-lg leading-relaxed">
+                YOUR NEMT, LLC is more than a transportation company—it's a partner in student success. Explore opportunities to drive through a company that makes a difference.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex items-center space-x-2 text-off-white">
+                  <Heart className="w-5 h-5 text-cyan-glow" />
+                  <span className="font-semibold">Making a Difference Every Day</span>
+                </div>
+                <motion.a
+                  href="/contact-us"
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-cta-yellow text-midnight font-semibold rounded-xl hover:shadow-cta-glow transition-all duration-300"
+                >
+                  <span>Contact Our Team</span>
+                  <Phone className="w-5 h-5" />
+                </motion.a>
+              </div>
             </div>
           </motion.div>
         </div>

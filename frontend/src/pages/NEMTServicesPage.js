@@ -92,7 +92,7 @@ const NEMTServicesPage = () => {
     },
     {
       question: 'Does Insurance Cover NEMT?',
-      answer: 'We proudly partner with major healthcare brokers, including Modivcare and MTM. We strongly recommend contacting your insurance provider or broker directly to confirm your coverage. Medicare may also cover limited, medically necessary NEMT services with a written doctor\'s order.'
+      answer: 'We work with various healthcare brokers and insurance providers. We strongly recommend contacting your insurance provider or broker directly to confirm your coverage. Medicare may also cover limited, medically necessary NEMT services with a written doctor\'s order.'
     },
     {
       question: 'What areas do you serve?',
@@ -142,7 +142,7 @@ const NEMTServicesPage = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-off-white/90 mb-8 leading-relaxed"
           >
-            Partnering with California's leading healthcare brokers and providers to ensure timely, safe, and dignified medical transportation for every patient.
+            Professional medical transportation services ensuring timely, safe, and dignified transport for every patient across Southern California.
           </motion.p>
 
           <motion.div 
@@ -165,29 +165,6 @@ const NEMTServicesPage = () => {
             </Link>
           </motion.div>
         </motion.div>
-      </section>
-
-      {/* Healthcare Partners */}
-      <section className="py-16 px-4 bg-glass-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-exo font-bold mb-8 text-off-white">
-            Trusted by Leading Healthcare Partners
-          </h2>
-          <div className="flex justify-center items-center space-x-12 opacity-80">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-glass-white border border-glass-border rounded-xl flex items-center justify-center mb-2">
-                <span className="text-cyan-glow font-bold text-lg">MTM</span>
-              </div>
-              <p className="text-off-white/80 text-sm">MTM Inc.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-glass-white border border-glass-border rounded-xl flex items-center justify-center mb-2">
-                <span className="text-cyan-glow font-bold text-lg">MV</span>
-              </div>
-              <p className="text-off-white/80 text-sm">Modivcare</p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Interactive Service Cards */}

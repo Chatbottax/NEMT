@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { CheckCircle, Shield, FileText, Users, Car, Clock, Heart, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SafetyCompliancePage = () => {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -10,25 +11,25 @@ const SafetyCompliancePage = () => {
   const [regulatoryRef, regulatoryInView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   const driverRequirements = [
-    { text: "Active NPI (National Provider Identifier)", icon: FileText },
-    { text: "CA PUC/NEMT Permits", icon: Award },
-    { text: "Comprehensive Insurance Coverage", icon: Shield },
-    { text: "Live Scan Fingerprinting", icon: Users },
-    { text: "DOJ/FBI Background Checks", icon: Shield },
-    { text: "DMV Pull-Notice Program", icon: Car },
-    { text: "DOT Medical Examination", icon: Heart },
-    { text: "TB Test Certification", icon: FileText },
+    { text: "Comprehensive background checks", icon: FileText },
+    { text: "DOT medical examinations", icon: Heart },
+    { text: "Drug screenings", icon: Shield },
+    { text: "Live Scan fingerprinting", icon: Users },
+    { text: "Virtual safety training", icon: Award },
+    { text: "TB test clearance", icon: FileText },
+    { text: "Clean driving records", icon: Car },
+    { text: "FirstAlt certification", icon: Award },
   ];
 
   const vehicleRequirements = [
-    { text: "ADA-Compliant Vehicles", icon: Car },
-    { text: "GPS & Live Telematics", icon: Shield },
-    { text: "Child-Safety Seats (When Required)", icon: Heart },
-    { text: "Quarterly Vehicle Inspections", icon: CheckCircle },
-    { text: "Proactive Maintenance Program", icon: Car },
-    { text: "Real-time Monitoring Systems", icon: Clock },
-    { text: "Emergency Communication Equipment", icon: Shield },
-    { text: "Wheelchair Securing Systems", icon: Users },
+    { text: "Vehicle inspections (2015 or newer)", icon: Car },
+    { text: "FirstAlt standard compliance", icon: Shield },
+    { text: "Real-time app communication", icon: Clock },
+    { text: "Dispatch oversight", icon: Users },
+    { text: "Route consistency", icon: Car },
+    { text: "Safety equipment verification", icon: Shield },
+    { text: "Regular maintenance schedules", icon: Car },
+    { text: "Emergency preparedness", icon: Heart },
   ];
 
   const regulatoryCompliance = [
@@ -48,8 +49,8 @@ const SafetyCompliancePage = () => {
       icon: FileText
     },
     {
-      title: "PUC Transportation Permits",
-      description: "Licensed by the California Public Utilities Commission for passenger transportation services with full commercial insurance coverage.",
+      title: "DOT Compliance",
+      description: "All drivers maintain current DOT medical certifications and undergo regular health assessments to ensure fitness for duty.",
       icon: Car
     }
   ];
@@ -118,7 +119,7 @@ const SafetyCompliancePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-exo font-bold mb-6">
-              Driver Screening <span className="text-cyan-glow">Excellence</span>
+              Our Drivers All <span className="text-cyan-glow">Pass</span>
             </h2>
             <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
               Every member of our team undergoes the most comprehensive background screening and certification process in the industry.
@@ -164,7 +165,7 @@ const SafetyCompliancePage = () => {
               Vehicle & <span className="text-cyan-glow">Technology</span> Standards
             </h2>
             <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-              Our fleet is equipped with the latest safety technology and maintained to exceed industry standards.
+              Our fleet meets FirstAlt standards and is supported by real-time technology for maximum safety and reliability.
             </p>
           </motion.div>
 
@@ -255,12 +256,12 @@ const SafetyCompliancePage = () => {
                   <Shield className="w-5 h-5 text-cyan-glow" />
                   <span className="font-semibold">Safety First, Always</span>
                 </div>
-                <a 
-                  href="mailto:admin@yournemt.com"
+                <Link 
+                  to="/contact-us"
                   className="px-6 py-3 bg-cta-yellow text-midnight font-semibold rounded-lg hover:shadow-cta-glow transition-all duration-300 hover:scale-105"
                 >
-                  Request Safety Documentation
-                </a>
+                  Contact Us About Safety
+                </Link>
               </div>
             </div>
           </motion.div>

@@ -70,11 +70,11 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-off-white/80">
                   <MapPin className="w-5 h-5 text-cyan-glow" />
-                  <span>Serving Riverside County & Surrounding Areas</span>
+                  <span>Corona, Riverside, and San Bernardino County</span>
                 </div>
                 <div className="flex items-center space-x-3 text-off-white/80">
                   <Phone className="w-5 h-5 text-cyan-glow" />
-                  <span>24/7 Emergency Support Available</span>
+                  <span>Professional Transportation Services</span>
                 </div>
                 <div className="flex items-center space-x-3 text-off-white/80">
                   <Mail className="w-5 h-5 text-cyan-glow" />
@@ -122,13 +122,8 @@ const Footer = () => {
             © 2025 Your NEMT, LLC. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy-policy" className="text-off-white/60 hover:text-cyan-glow text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="text-off-white/60 hover:text-cyan-glow text-sm transition-colors">
-              Terms of Service
-            </Link>
             <span className="text-off-white/60 text-sm">HIPAA Compliant</span>
+            <span className="text-off-white/60 text-sm">FirstAlt Certified</span>
           </div>
         </div>
       </div>
