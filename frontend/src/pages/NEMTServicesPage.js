@@ -24,7 +24,7 @@ const NEMTServicesPage = () => {
     },
     {
       id: 'wheelchair',
-      icon: Wheelchair,
+      icon: User,
       title: 'Wheelchair',
       baseRate: '$45+',
       perMile: '$4+',
