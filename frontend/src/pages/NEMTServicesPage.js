@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Wheelchair, Heart, Clock, Shield, ChevronRight, Users, Car, Truck } from 'lucide-react';
+import { Heart, Clock, Shield, ChevronRight, Users, Car, Truck, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NEMTServicesPage = () => {
