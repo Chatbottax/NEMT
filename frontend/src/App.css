@@ -1,38 +1,133 @@
+/* App.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS for additional styling */
 .App {
-    text-align: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+::-webkit-scrollbar-track {
+  background: #111827;
 }
 
-.App-link {
-    color: #61dafb;
+::-webkit-scrollbar-thumb {
+  background: #00F6FF;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}
+
+/* Glass morphism utility */
+.glass-effect {
+  background: rgba(229, 231, 235, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 246, 255, 0.1);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #00F6FF 0%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom button hover effects */
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 246, 255, 0.5);
+}
+
+.btn-cta-glow:hover {
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+}
+
+/* Animation for loading states */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 246, 255, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Ensure proper layering for fixed elements */
+.fixed-nav {
+  z-index: 1000;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #00F6FF;
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure high contrast for accessibility */
+.high-contrast {
+  color: #E5E7EB;
+  background-color: #111827;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .responsive-text-xl {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .responsive-text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .responsive-text-5xl {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
 }
