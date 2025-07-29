@@ -33,8 +33,8 @@ const HomePage = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/32322669/pexels-photo-32322669.jpeg"
-            alt="School Bus - Student Transportation"
+            src="https://customer-assets.emergentagent.com/job_smart-transit-4/artifacts/gwwojhxs_ChatGPT%20Image%20Jul%2015%2C%202025%2C%2007_24_42%20PM.png"
+            alt="Professional Driver with Students - Your NEMT Transportation"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-midnight/70 backdrop-blur-sm"></div>
